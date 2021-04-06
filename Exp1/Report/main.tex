@@ -6,6 +6,11 @@
 \usepackage{abstract}
 \usepackage{siunitx}
 \usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{appendix}
+
+\renewcommand{\appendixpagename}{附录}
+
 
 \title{用正比计数器测量X射线的吸收和特征谱}
 \author{钱思天 2001112187}
@@ -100,10 +105,79 @@ $n_1=1$,$n_2=2$。根据特征X射线的能量，可以辨认激发原子的原�
         \item 对所测得的一组数据结果进行最小二乘法拟合，求出吸收系数$\mu_m$。
         \item 用微机多道对$^{55}\text{Fe}$源进行能谱测量，评价能量分辨率。
     \end{enumerate}
- 
-
     \section{数据处理}
-    
+    \subsection{利用已知样品标定探测器，并确定未知样品的元素}
+    对于铁、铬、铜、锌、锗五种样品的测量结果（如图\ref{fig:Calibration}）
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.5\textwidth]{../plot/Calibration.pdf}
+        \caption{五种样品的特征$X$射线谱测量结果\label{fig:Calibration}}
+    \end{figure}
+    进行高斯拟合（拟合图见附录），得到的峰位如下表\ref{tab:Calibration}
+    \begin{table}[htbp]
+        \centering
+        \caption{五种样品的特征$X$射线谱拟合峰位及参考$K_\alpha$系能量\label{tab:Calibration}}
+        \begin{tabular}{lrrrrr}
+            \toprule
+            {} &          Cu &          Zn &          Fe &          Ge &          Cr \\
+            \midrule
+            Fitted Peak Pos. &  613.17 &  658.92 &  488.21 &  750.43 &  410.70 \\
+            $K_\alpha[\si{KeV}]$ &    8.047 &    8.638 &    6.403 &    9.885 &    5.414 \\
+            \bottomrule
+            \end{tabular}
+    \end{table}
+    根据多道探测器的道址与能量的线性关系，利用最小二乘法进行线性回归做刻度，得到刻度关系为：
+    \begin{equation}
+        E = 0.0131*\text{Ch} - 0.0030
+    \end{equation}
+    回归表现极佳，$R^2=0.9999$。结合对未知实验的测量结果（见图
     \section{结论}
-    
+    \section{致谢}
+    \clearpage
+    \appendix
+    \appendixpage
+    \section{思考题}
+    \section{谱线高斯峰拟合结果图}
+    \subsection{利用已知样品标定探测器，并确定未知样品的元素}
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=0.7\textwidth]{../plot/Fitted_Cu.pdf}
+        \caption{铜样品拟合图\label{fig:Fitted_Cu}}
+    \end{figure}
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=0.7\textwidth]{../plot/Fitted_Fe.pdf}
+        \caption{铁样品拟合图\label{fig:Fitted_Fe}}
+    \end{figure}
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=0.7\textwidth]{../plot/Fitted_Cr.pdf}
+        \caption{铬样品拟合图\label{fig:Fitted_Cr}}
+    \end{figure}
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=0.7\textwidth]{../plot/Fitted_Ge.pdf}
+        \caption{锗样品拟合图\label{fig:Fitted_Ge}}
+    \end{figure}
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=0.7\textwidth]{../plot/Fitted_Zn.pdf}
+        \caption{锌样品拟合图\label{fig:Fitted_Zn}}
+    \end{figure}
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=0.7\textwidth]{../plot/Fitted_X1.pdf}
+        \caption{未知样品1拟合图\label{fig:Fitted_X1}}
+    \end{figure}
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=0.7\textwidth]{../plot/Fitted_X2.pdf}
+        \caption{未知样品2拟合图\label{fig:Fitted_X2}}
+    \end{figure}
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=0.7\textwidth]{../plot/Fitted_X3.pdf}
+        \caption{未知样品3拟合图\label{fig:Fitted_X3}}
+    \end{figure}
+     
 \end{document}
