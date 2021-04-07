@@ -8,6 +8,7 @@
 \usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage{appendix}
+\usepackage{hyperref}
 
 \renewcommand{\appendixpagename}{附录}
 
@@ -29,7 +30,7 @@
     \section{背景简介}
     \subsection{实验原理}
     \subsubsection{本征$X$射线谱}
-    原子核通过核衰变过程(内转换及轨道电子俘获)或由外部射线激发而在其内层产生电子空穴，当外层电子向内层跃迁时发射的射线即为特征$X$射线。玻耳理论指出电子跃迁时放出的光子具有一定的波长$\lambda$它的能量为:
+    原子核通过核衰变过程(内转换及轨道电子俘获)或由外部射线激发而在其内层产生电子空穴，当外层电子向内层跃迁时发射的射线即为特征$X$射线。玻耳理论指出电子跃迁时放出的光子具有一定的波长$\lambda$，它的能量为:
     \begin{equation}
         h v=Z^{2} \frac{2 \pi^{2} m_{0} e^{4}}{h^{2}}\left(\frac{1}{n_{1}^{2}}-\frac{1}{n_{2}^{2}}\right)
     \end{equation}
@@ -88,7 +89,7 @@ $n_1=1$,$n_2=2$。根据特征X射线的能量，可以辨认激发原子的原�
         \item 样品(铜等)：若干；
         \item 铝吸收片：若干；
         \item $^{238}\text{Pu}$放射源：一枚；
-        \item $^{55}\text{Fe}$放射源：一枚；
+        \item $^{55}\text{Fe}$放射源：一枚。
     \end{enumerate}
     \subsection{实验操作}
     \begin{enumerate}
@@ -130,7 +131,37 @@ $n_1=1$,$n_2=2$。根据特征X射线的能量，可以辨认激发原子的原�
     \begin{equation}
         E = 0.0131*\text{Ch} - 0.0030
     \end{equation}
-    回归表现极佳，$R^2=0.9999$。结合对未知实验的测量结果（见图
+    回归表现极佳，$R^2=0.9999$。结合对未知实验的测量结果（见图\ref{fig:Prediction}，拟合图见附录），可得表\ref{tab:Prediction}。
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=0.5\textwidth]{../plot/Prediction.pdf}
+        \caption{三种未知样品的特征$X$射线谱\label{fig:Prediction}}
+    \end{figure}
+    \begin{table}[htbp]
+        \centering
+        \caption{三种未知样品的特征$X$射线谱高斯峰拟合峰位和$K_\alpha$线系能量预测值\label{tab:Prediction}}
+        \begin{tabular}{lrrr}
+            \toprule
+            {} &          X1 &          X2 &          X3 \\
+            \midrule
+            Fitted Peak Pos. &  375.413539 &  527.960351 &  569.945123 \\
+            $K_\alpha[\si{KeV}]$ &    4.931769 &    6.936996 &    7.488885 \\
+            \bottomrule
+            \end{tabular}
+            
+    \end{table}
+    和元素$K_\alpha$线系的参考能量对照，确认各未知样品的元素种类如下：
+    \begin{enumerate}
+        \item X1：V，钒元素；
+        \item X2：Co，钴元素；
+        \item X3：Ni，镍元素。
+    \end{enumerate} 
+    本部分的拟合峰位线性回归图及预测$K_\alpha$值如图\ref{fig:LinearReg1}。
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=0.5\textwidth]{../plot/LinearReg1.pdf}
+        \caption{峰位-$K_\alpha$能级拟合图\label{fig:LinearReg1}}
+    \end{figure}
     \section{结论}
     \section{致谢}
     \clearpage
