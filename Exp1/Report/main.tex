@@ -77,7 +77,7 @@ $n_1=1$,$n_2=2$。根据特征X射线的能量，可以辨认激发原子的原�
     实验装置示意图如图\ref{fig:ExpIns}。涉及的实验装置如下：
     \begin{figure}[htbp]
         \centering
-        \includegraphics[width=0.5\textwidth]{../plot/ExpIns.png}
+        \includegraphics[width=0.7\textwidth]{../plot/ExpIns.png}
         \caption{实验装置示意图\label{fig:ExpIns}}
     \end{figure}
     \begin{enumerate}
@@ -111,7 +111,7 @@ $n_1=1$,$n_2=2$。根据特征X射线的能量，可以辨认激发原子的原�
     对于铁、铬、铜、锌、锗五种样品的测量结果（如图\ref{fig:Calibration}）
     \begin{figure}
         \centering
-        \includegraphics[width=0.5\textwidth]{../plot/Calibration.pdf}
+        \includegraphics[width=0.7\textwidth]{../plot/Calibration.pdf}
         \caption{五种样品的特征$X$射线谱测量结果\label{fig:Calibration}}
     \end{figure}
     进行高斯拟合（拟合图见附录），得到的峰位如下表\ref{tab:Calibration}
@@ -134,7 +134,7 @@ $n_1=1$,$n_2=2$。根据特征X射线的能量，可以辨认激发原子的原�
     回归表现极佳，$R^2=0.9999$。结合对未知实验的测量结果（见图\ref{fig:Prediction}，拟合图见附录），可得表\ref{tab:Prediction}。
     \begin{figure}[htbp]
         \centering
-        \includegraphics[width=0.5\textwidth]{../plot/Prediction.pdf}
+        \includegraphics[width=0.7\textwidth]{../plot/Prediction.pdf}
         \caption{三种未知样品的特征$X$射线谱\label{fig:Prediction}}
     \end{figure}
     \begin{table}[htbp]
@@ -144,8 +144,8 @@ $n_1=1$,$n_2=2$。根据特征X射线的能量，可以辨认激发原子的原�
             \toprule
             {} &          X1 &          X2 &          X3 \\
             \midrule
-            Fitted Peak Pos. &  375.413539 &  527.960351 &  569.945123 \\
-            $K_\alpha[\si{KeV}]$ &    4.931769 &    6.936996 &    7.488885 \\
+            Fitted Peak Pos. &  375.41 &  527.96 &  569.94 \\
+            $K_\alpha[\si{KeV}]$ &    4.93 &    6.94 &    7.49 \\
             \bottomrule
             \end{tabular}
             
@@ -159,9 +159,61 @@ $n_1=1$,$n_2=2$。根据特征X射线的能量，可以辨认激发原子的原�
     本部分的拟合峰位线性回归图及预测$K_\alpha$值如图\ref{fig:LinearReg1}。
     \begin{figure}[htbp]
         \centering
-        \includegraphics[width=0.5\textwidth]{../plot/LinearReg1.pdf}
+        \includegraphics[width=0.7\textwidth]{../plot/LinearReg1.pdf}
         \caption{峰位-$K_\alpha$能级拟合图\label{fig:LinearReg1}}
     \end{figure}
+    \subsection{铝片对铜的特征$X$射线线性吸收系数}
+    对于不同厚度的铝片，测量结果如图\ref{fig:Absorption}所示（高斯峰拟合结果见附录）。峰拟合结果总结如表\ref{tab:Absorption}。
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=0.7\textwidth]{../plot/Absorption.pdf}  
+        \caption{使用不同厚度的铝吸收片后的铜特征$X$射线谱测量结果\label{fig:Absorption}}
+    \end{figure}
+    \begin{table}[htbp]
+        \centering
+        \caption{不同厚度的铝吸收片后拟合结果\label{tab:Absorption}}
+        \begin{tabular}{lrrrrr}
+            \toprule
+            Num. of Slices &            2 &            4 &            6 &            8 &           10 \\
+            \midrule
+            Fitted Peak Pos. &    613.56 &    613.83 &    614.25 &    615.01 &    614.50 \\
+            Fitted Stderr.   &     46.47 &     46.53 &     45.90 &     47.39 &     47.63 \\
+            Fitted Norm.    &  44897.09 &  35904.35 &  28660.19 &  23116.89 &  18097.90 \\
+            Deepth $d_m[\si{mg\per cm^2}]$  &      4.30 &      8.60 &     12.90 &     17.20 &     21.50 \\
+            \bottomrule
+            \end{tabular}
+    \end{table} 
+    选取半高峰位（FWHM）下的面积为计数，则有
+    \begin{equation}
+        S_{\pm \text{FWHM}} = \text{Norm.}*\text{erf}{(\sqrt{2}\ln{2})} \propto \text{Norm.} 
+    \end{equation}
+    考虑线性吸收下$S\propto S_0*\exp(-\mu_m*d_m)$，则有：
+    \begin{equation}
+        \ln{(\text{Norm.})} = -\mu_m*d_m+C
+    \end{equation}
+    进行线性回归（见图\ref{fig:LinearReg2}，
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=0.7\textwidth]{../plot/LinearReg2.pdf}
+        \caption{厚度与拟合归一化系数对数的线性拟合\label{fig:LinearReg2}}
+    \end{figure}
+    可以得到
+    \begin{equation}
+        \ln{(\text{Norm.})} = -0.0525*d_m+10.9404 
+    \end{equation}
+    回归$R^2 = 0.9996$，得到
+    \begin{equation}
+        \mu_m = -0.0525\si{cm^2\per mg} = -52.5\si{cm^2\per g}
+    \end{equation}
+    与理论结果符合较好。
+    \subsection{利用$^{55}\text{Fe}$对探测器分辨率进行评估}
+    对$^{55}\text{Fe}$的测量结果如图\ref{fig:55Fe}。
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.7\textwidth]{../plot/55Fe.pdf}
+        \caption{对$^{55}\text{Fe}$放射源的测量结果\label{fig:55Fe}}
+    \end{figure}
+    根据$^{55}\text{Fe}$的原子序数，可以确定其特征$X$射线峰应该是靠左的较高峰。但是，测量结果中并列的两个峰，意味着采用单高斯峰拟合可能存在的失败。因此这里采用直接读数的方式进行分辨率评估。
     \section{结论}
     \section{致谢}
     \clearpage
@@ -169,7 +221,6 @@ $n_1=1$,$n_2=2$。根据特征X射线的能量，可以辨认激发原子的原�
     \appendixpage
     \section{思考题}
     \section{谱线高斯峰拟合结果图}
-    \subsection{利用已知样品标定探测器，并确定未知样品的元素}
     \begin{figure}[htbp]
         \centering
         \includegraphics[width=0.7\textwidth]{../plot/Fitted_Cu.pdf}
@@ -210,5 +261,29 @@ $n_1=1$,$n_2=2$。根据特征X射线的能量，可以辨认激发原子的原�
         \includegraphics[width=0.7\textwidth]{../plot/Fitted_X3.pdf}
         \caption{未知样品3拟合图\label{fig:Fitted_X3}}
     \end{figure}
-     
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=0.7\textwidth]{../plot/Fitted_2t.pdf}
+        \caption{2片铝吸收片测量结果拟合图\label{fig:Fitted_2t}}
+    \end{figure}
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=0.7\textwidth]{../plot/Fitted_4t.pdf}
+        \caption{4片铝吸收片测量结果拟合图\label{fig:Fitted_4t}}
+    \end{figure}
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=0.7\textwidth]{../plot/Fitted_6t.pdf}
+        \caption{6片铝吸收片测量结果拟合图\label{fig:Fitted_6t}}
+    \end{figure}
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=0.7\textwidth]{../plot/Fitted_8t.pdf}
+        \caption{8片铝吸收片测量结果拟合图\label{fig:Fitted_8t}}
+    \end{figure}
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=0.7\textwidth]{../plot/Fitted_10t.pdf}
+        \caption{10片铝吸收片测量结果拟合图\label{fig:Fitted_10t}}
+    \end{figure}
 \end{document}

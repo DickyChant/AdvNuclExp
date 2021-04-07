@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.12.12)  7 APR 2021 10:31
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.12.12)  7 APR 2021 11:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -685,15 +685,43 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 ]
 File: ../plot/ExpIns.png Graphic file (type bmp)
 <../plot/ExpIns.png>
- [2]
+ [2] [3]
 File: ../plot/Calibration.pdf Graphic file (type pdf)
 <use ../plot/Calibration.pdf>
+ [4]
 File: ../plot/Prediction.pdf Graphic file (type pdf)
 <use ../plot/Prediction.pdf>
- [3] [4]
 File: ../plot/LinearReg1.pdf Graphic file (type pdf)
 <use ../plot/LinearReg1.pdf>
  [5]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 165.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 165.
+
+File: ../plot/Absorption.pdf Graphic file (type pdf)
+<use ../plot/Absorption.pdf>
+File: ../plot/LinearReg2.pdf Graphic file (type pdf)
+<use ../plot/LinearReg2.pdf>
+[6] [7]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 209.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 209.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 209.
+
+File: ../plot/55Fe.pdf Graphic file (type pdf)
+<use ../plot/55Fe.pdf>
+[8]
 File: ../plot/Fitted_Cu.pdf Graphic file (type pdf)
 <use ../plot/Fitted_Cu.pdf>
 File: ../plot/Fitted_Fe.pdf Graphic file (type pdf)
@@ -710,25 +738,35 @@ File: ../plot/Fitted_X2.pdf Graphic file (type pdf)
 <use ../plot/Fitted_X2.pdf>
 File: ../plot/Fitted_X3.pdf Graphic file (type pdf)
 <use ../plot/Fitted_X3.pdf>
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 214.
- [6
+File: ../plot/Fitted_2t.pdf Graphic file (type pdf)
+<use ../plot/Fitted_2t.pdf>
+File: ../plot/Fitted_4t.pdf Graphic file (type pdf)
+<use ../plot/Fitted_4t.pdf>
+File: ../plot/Fitted_6t.pdf Graphic file (type pdf)
+<use ../plot/Fitted_6t.pdf>
+File: ../plot/Fitted_8t.pdf Graphic file (type pdf)
+<use ../plot/Fitted_8t.pdf>
+File: ../plot/Fitted_10t.pdf Graphic file (type pdf)
+<use ../plot/Fitted_10t.pdf>
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 289.
+ [9
 
-] [7] [8] [9] [10]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 214.
+] [10] [11] [12] [13] [14] [15]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 289.
  (./main.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 214.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 214.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 289.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 289.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: A32776038C6573DCEBB4EA8D9BA558A6;1696.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 214.
+(rerunfilecheck)             Checksum: B88A3886B15090DBADC5483BAA5557E5;1826.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 289.
  ) 
 Here is how much of TeX's memory you used:
- 18434 strings out of 479418
- 405174 string characters out of 5884584
- 678401 words of memory out of 5000000
- 35634 multiletter control sequences out of 15000+600000
- 542217 words of font info for 110 fonts, out of 8000000 for 9000
+ 18496 strings out of 479418
+ 406610 string characters out of 5884584
+ 678904 words of memory out of 5000000
+ 35684 multiletter control sequences out of 15000+600000
+ 542233 words of font info for 112 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 58i,15n,81p,413b,809s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 58i,21n,81p,413b,815s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (10 pages).
+Output written on main.pdf (15 pages).
