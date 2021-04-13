@@ -71,14 +71,13 @@
 $^{60}\text{Co}$的测量谱如图\ref{fig:60Co}，根据测量结果，可以计算出谱仪的相关性能参数，如谱仪分辨率，峰康比和相对探测效率。
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.7\textwidth]{../plots/Co_net.pdf}
+    \includegraphics[width=\textwidth]{../plots/Co_net.pdf}
     \caption{$^{60}\text{Co}$放射源的测量结果\label{fig:60Co}}
 \end{figure}
-\subsubsection{谱仪分辨率}
-为了测算谱仪分辨率，需要采用$^{60}\text{Co}$的两个特征峰，如图\ref{fig:60Co2Peak}。
+为了测算谱仪分辨率等，需要采用$^{60}\text{Co}$的两个特征峰，如图\ref{fig:60Co2Peak}。
 \begin{figure}
     \centering
-    \includegraphics[width=0.7\textwidth]{../plots/Co_two_Peak.pdf}
+    \includegraphics[width=0.6\textwidth]{../plots/Co_two_Peak.pdf}
     \caption{$^{60}\text{Co}$的两个特征峰\label{fig:60Co2Peak}}
 \end{figure}
 利用PHA18软件进行寻峰操作，可得结果如表\ref{tab:60Co}，易知峰No.2为$1.33\si{MeV}$全能峰。其他的测量结果为
@@ -89,13 +88,26 @@ $^{60}\text{Co}$的测量谱如图\ref{fig:60Co}，根据测量结果，可以�
 \begin{table}[htbp]
     \centering
     \caption{$^{60}\text{Co}$的两个峰的测量结果\label{tab:60Co}}
-    \begin{tabular}{rrrr}
+    \begin{tabular}{lrrrr}
 \toprule
- Peak &  Channel &  FWHM &  Peak Counts \\
+Peak &  Channel &  FWHM &  Peak Counts &  Peak Area \\
 \midrule
-     No.1 &      803 &   9.9 &        16472 \\
-     No.2 &      926 &   7.7 &        16633 \\
+No.1    &      803 &   9.9 &        16472 &     193183 \\
+No.2    &      926 &   7.7 &        16633 &     149863 \\
 \bottomrule
 \end{tabular}
 \end{table}
+计算可得：
+\begin{enumerate}
+    \item 谱仪的能量分辨
+    \begin{equation}
+        \text{FWHM}*\frac{1332.5-1173.2}{826-803} = 9.97\si{KeV}
+    \end{equation}
+\item 峰康比：3.73；
+\item 相对探测效率：
+\begin{equation}
+    \varepsilon_{ref} = \frac{S}{Dt} = 0.3\%
+\end{equation}
+\end{enumerate}
+\subsection{刻度}
 \end{document}
