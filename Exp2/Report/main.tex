@@ -66,5 +66,36 @@
     \item 测量$^{152}\text{Eu}$十分钟，利用此数据及接下来测量的$^{60}\text{Co}$数据进行刻度。
     \item 将主放大器的放大倍数调至两倍$(100\times 1.12)$，而后分别测量$^{60}\text{Co},^{152}\text{Eu}$及环境本底各10分钟，并利用他们进行刻度。
 \end{enumerate}
-
+\section{数据处理}
+\subsection{利用$^{60}\text{Co}$的测量结果，计算谱仪的相关性能参数}
+$^{60}\text{Co}$的测量谱如图\ref{fig:60Co}，根据测量结果，可以计算出谱仪的相关性能参数，如谱仪分辨率，峰康比和相对探测效率。
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\textwidth]{../plots/Co_net.pdf}
+    \caption{$^{60}\text{Co}$放射源的测量结果\label{fig:60Co}}
+\end{figure}
+\subsubsection{谱仪分辨率}
+为了测算谱仪分辨率，需要采用$^{60}\text{Co}$的两个特征峰，如图\ref{fig:60Co2Peak}。
+\begin{figure}
+    \centering
+    \includegraphics[width=0.7\textwidth]{../plots/Co_two_Peak.pdf}
+    \caption{$^{60}\text{Co}$的两个特征峰\label{fig:60Co2Peak}}
+\end{figure}
+利用PHA18软件进行寻峰操作，可得结果如表\ref{tab:60Co}，易知峰No.2为$1.33\si{MeV}$全能峰。其他的测量结果为
+\begin{enumerate}
+    \item 康普顿平台平均计数：4459.5；
+    \item 活时$\si{528 s}$。
+\end{enumerate}
+\begin{table}[htbp]
+    \centering
+    \caption{$^{60}\text{Co}$的两个峰的测量结果\label{tab:60Co}}
+    \begin{tabular}{rrrr}
+\toprule
+ Peak &  Channel &  FWHM &  Peak Counts \\
+\midrule
+     No.1 &      803 &   9.9 &        16472 \\
+     No.2 &      926 &   7.7 &        16633 \\
+\bottomrule
+\end{tabular}
+\end{table}
 \end{document}
