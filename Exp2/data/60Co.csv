@@ -1,3 +1,3 @@
-Peak,Channel,FWHM,Peak Counts,Peak Area
-1,803,9.9,16472,193183
-2,926,7.7,16633,149863
+Peak,Channel,FWHM,Peak Counts,Peak Area,E
+1,803,9.9,16472,193183,1173.2
+2,926,7.7,16633,149863,1332.5

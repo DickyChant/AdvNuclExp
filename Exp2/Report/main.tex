@@ -88,12 +88,12 @@ $^{60}\text{Co}$的测量谱如图\ref{fig:60Co}，根据测量结果，可以�
 \begin{table}[htbp]
     \centering
     \caption{$^{60}\text{Co}$的两个峰的测量结果\label{tab:60Co}}
-    \begin{tabular}{lrrrr}
+    \begin{tabular}{rrrrrr}
 \toprule
-Peak &  Channel &  FWHM &  Peak Counts &  Peak Area \\
+Peak &  Channel &  FWHM &  Peak Counts &  Peak Area & $E[\si{KeV}]$\\
 \midrule
-No.1    &      803 &   9.9 &        16472 &     193183 \\
-No.2    &      926 &   7.7 &        16633 &     149863 \\
+No.1    &      803 &   9.9 &        16472 &     193183 & 1173.2 \\
+No.2    &      926 &   7.7 &        16633 &     149863 & 1332.5\\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -114,20 +114,120 @@ No.2    &      926 &   7.7 &        16633 &     149863 \\
 \begin{equation}
     E = 1.2591*\text{Ch} + 133.22
 \end{equation}
-但是，仅仅利用$^{60}\text{Co}$能谱的两个峰进行刻度，结果难免会有测量误差导致的偏差。利用刻度结果对$^{152}\text{Eu}$进行刻度，可得因此，刻度选用$^{152}\text{Eu}$的各能量峰进行。对$^{152}\text{Eu}$的测量结果如图\ref{fig:152Eu_Full}所示：
+但是，仅仅利用$^{60}\text{Co}$能谱的两个峰进行刻度，结果难免会有测量误差导致的偏差。
+
+对$^{152}\text{Eu}$的测量结果如图\ref{fig:152Eu_Full}所示。
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{../plots/Eu_full_net.pdf}
     \caption{$^{152}\text{Eu}$第一次刻度的测量结果\label{fig:152Eu_Full}}
 \end{figure}
+
 如果利用上述$^{60}\text{Co}$进行刻度的结果对$^{152}\text{Eu}$进行粗测，结果如图\ref{fig:Roughly_Cali_full}。
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{../plots/Roughly_Cali_full.pdf}
     \caption{利用$^{60}\text{Co}$的粗刻度结果对$^{152}\text{Eu}$的峰位进行预测，并和测量结果进行比较\label{fig:Roughly_Cali_full}}
 \end{figure}
-在高能区，粗测的刻度结果能够很好的解释实验观察到的峰位。但是能量较低的区间，则难以令人满意。因此，将低能区观测到的五个峰匹配上理论峰能量进行新的刻度，结果如下。
 
+在高能区，粗测的刻度结果能够很好的解释实验观察到的峰位。但是能量较低的区间，则难以令人满意，这可能是由于低能区的响应不够线性带来的。因此，我们选用高能区的五个峰位，加上$^{60}\text{Co}$的两个峰进行刻度。$^{152}\text{Eu}$在这一阶段的测量数据记录如表\ref{tab:152Eu_full}。
+\begin{table}[htbp]
+    \centering
+    \caption{$^{152}\text{Eu}$的测量结果\label{tab:152Eu_full}}
+    \begin{tabular}{rrrrrrrr}
+\toprule
+Peak &  Channel &  Peak Area: $S$ &  Probability: $K$ &        $E[\si{KeV}]$ &          $S/K$ &  $\ln(S/K)$ &  $\ln(E)$ \\
+\midrule
+1    &      985 &      31800 &      0.20850 &  1408.03 &   152517.986 &   11.935 &  7.250 \\
+2    &      756 &      23924 &      0.13560 &  1112.00 &   176430.678 &   12.081 &  7.014 \\
+3    &      736 &      22745 &      0.10160 &  1085.80 &   223868.110 &   12.319 &  6.990 \\
+4    &      641 &      31479 &      0.14620 &   964.00 &   215314.637 &   12.280 &  6.871 \\
+5    &      499 &      30256 &      0.12960 &   778.90 &   233456.790 &   12.361 &  6.658 \\
+6    &      256 &      20451 &      0.03121 &   444.00 &   655270.747 &   13.393 &  6.096 \\
+7    &      233 &       9357 &      0.02230 &   411.30 &   419596.413 &   12.947 &  6.019 \\
+8    &      192 &     197370 &      0.26580 &   344.28 &   742550.790 &   13.518 &  5.841 \\
+9    &      122 &      83933 &      0.07510 &   244.69 &  1117616.511 &   13.927 &  5.500 \\
+10   &       95 &     115823 &      0.28370 &   121.78 &   408258.724 &   12.920 &  4.802 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+根据实验数据，可得刻度为：
+\begin{equation}
+    E = 1.2945*\text{Ch} + 133.41
+\end{equation}
+刻度结果如图\ref{fig:Full_Fit}。
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{../plots/Full_Fit.pdf}
+    \caption{本部分的刻度结果\label{fig:Full_Fit}}
+\end{figure}
+同时，也可得相对效率曲线如图\ref{fig:Relative}。考虑到低能区的响应不是很好，我们去除了低能的离群点。得到相对效率曲线如下：
+\begin{equation}
+    \ln(S/K) = -1.1274\ln(E) + 20.0469
+\end{equation}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{../plots/Relative.pdf}
+    \caption{相对效率曲线$\ln(S/K)-\ln(E)$\label{fig:Relative}}
+\end{figure}
+\subsection{绝对效率曲线}
+    对谱线的绝对效率值可以进行如下计算：
+    \begin{equation}
+        \begin{aligned}
+            \varepsilon_i = \varepsilon_0\times(\frac{S_i}{K_i}/\frac{S_0}{K_0})
+        \end{aligned}
+    \end{equation}
+    将$^{60}\text{Co}$的全能峰的峰位代入，可以得到
+    \begin{equation}
+        \frac{S_0}{K_0} \approx 152583.73
+    \end{equation}
+    由此，可以得到绝对探测效率公式为
+    \begin{equation}
+        \varepsilon_i = 1.97\times 10^{-8}(\frac{S_i}{K_i})
+    \end{equation}
+    而后，可以做出绝对效率曲线如图\ref{fig:Absolute}。
+    \begin{figure}
+        \centering
+        \includegraphics[width=\textwidth]{../plots/Absolute.pdf}
+        \caption{$^{152}\text{Eu}$的绝对效率曲线\label{fig:Absolute}}
+    \end{figure}
+    \subsection{分析未知源能谱}
+    在这一阶段的实验里，因为调节了放大倍数，需要重新做刻度。重新测量的$^{152}\text{Eu}$如图\ref{fig:152Eu_Half}
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=\textwidth]{../plots/Eu_half_net.pdf}
+        \caption{放大倍数缩小一半后的$^{152}\text{Eu}$测量结果\label{fig:152Eu_Half}}
+    \end{figure}
+    鉴于放大倍数缩小到了原来的一半，考虑到原先观察到的低能区的线性性并不好，这里我们仅考虑能量最大的四个峰进行刻度。测量结果如表\ref{tab:152Eu_half}。进行刻度，可得：\begin{equation}
+        E = 2.8433*\text{Ch} + 146.2568
+    \end{equation}
+    线性拟合图如\ref{fig:Half_fit}。
+    \begin{figure}
+        \centering
+        \includegraphics[width=\textwidth]{../plots/Half_fit.pdf}
+        \caption{$^{152}\text{Eu}$放大倍数缩小一半后刻度结果\label{fig:Half_fit}}
+    \end{figure}
+    \begin{table}[htbp]
+        \centering
+        \caption{$^{152}\text{Eu}$放大倍数缩小一半后刻度结果\label{tab:152Eu_half}}
+        \begin{tabular}{lrrrrr}
+\toprule
+Peak    &       1 &       2 &      3 &      4 &      5 \\
+\midrule
+Channel &   446 &   338 &   329&  285 &  226 \\
+$E[\si{KeV}]$       &  1408.03 &  1112.0 &  1085.8 &  964.0 &  778.9 \\
+\bottomrule
+\end{tabular}
+    \end{table}
+
+    对环境本底和矿渣的测量图如图\ref{fig:slag_vs_env}所示。
+    \begin{figure}
+        \centering
+        \includegraphics[width=\textwidth]{../plots/slag_vs_env.pdf}
+        \caption{矿渣（左）和环境本底（右）的测量结果\label{fig:slag_vs_env}}
+    \end{figure}
+    对环境本底
 \section{致谢}
     感谢许金艳老师的实验指导，感谢刘寅绅同学和童星昱同学的讨论。也感谢张轩豪同学一起进行实验。
     \clearpage
