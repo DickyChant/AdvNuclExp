@@ -47,7 +47,7 @@
     \item 利用$^{60}\text{Co}$,$^{152}\text{Eu}$做探测效率刻度；
     \item 测定未知样品的种类、活度。
 \end{enumerate}
-\section{}
+\section{实验介绍}
 \subsection{实验装置}
 本实验用到的实验装置比较简单，有：
 \begin{enumerate}
@@ -110,10 +110,38 @@ No.2    &      926 &   7.7 &        16633 &     149863 \\
 \end{equation}
 \end{enumerate}
 \subsection{刻度}
-原则上说，既然道址和能量存在线性正比关系，那么最少利用两个点就可以进行刻度。但是，仅仅利用$^{60}\text{Co}$能谱的两个峰进行刻度，结果难免会有测量误差导致的偏差。因此，刻度选用$^{152}\text{Eu}$的各能量峰进行。对$^{152}\text{Eu}$的测量结果如图\ref{fig:152Eu_Full}所示：
+原则上说，既然道址和能量存在线性正比关系，那么最少利用两个点就可以进行刻度。仅利用$^{60}\text{Co}$刻度的结果为：
+\begin{equation}
+    E = 1.2591*\text{Ch} + 133.22
+\end{equation}
+但是，仅仅利用$^{60}\text{Co}$能谱的两个峰进行刻度，结果难免会有测量误差导致的偏差。利用刻度结果对$^{152}\text{Eu}$进行刻度，可得因此，刻度选用$^{152}\text{Eu}$的各能量峰进行。对$^{152}\text{Eu}$的测量结果如图\ref{fig:152Eu_Full}所示：
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{../plots/Eu_full_net.pdf}
-    \caption{$^{152}\text{Eu}$第一次刻度的测量结果\label{fig:152_Eu_Full}}
+    \caption{$^{152}\text{Eu}$第一次刻度的测量结果\label{fig:152Eu_Full}}
 \end{figure}
+如果利用上述$^{60}\text{Co}$进行刻度的结果对$^{152}\text{Eu}$进行粗测，结果如图\ref{fig:Roughly_Cali_full}。
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{../plots/Roughly_Cali_full.pdf}
+    \caption{利用$^{60}\text{Co}$的粗刻度结果对$^{152}\text{Eu}$的峰位进行预测，并和测量结果进行比较\label{fig:Roughly_Cali_full}}
+\end{figure}
+在高能区，粗测的刻度结果能够很好的解释实验观察到的峰位。但是能量较低的区间，则难以令人满意。因此，将低能区观测到的五个峰匹配上理论峰能量进行新的刻度，结果如下。
+
+\section{致谢}
+    感谢许金艳老师的实验指导，感谢刘寅绅同学和童星昱同学的讨论。也感谢张轩豪同学一起进行实验。
+    \clearpage
+    \appendix
+    \appendixpage
+    \section{思考题}
+    \begin{enumerate}
+        \item \begin{itemize}
+            \item NaI(TI)探测:对$\gamma$射线，当能量大于$150\si{KeV}$时响应是线性的。其主要优点是密度大，原子序数高，对γ射线探测效率高。同时因为发光效率高，能量分辨率也较好。但必须密封使用以防止潮解。
+            \item 高纯锗: 作为半导体探测器，必须用液态氮冷却条件下使用。他的优点一是空间分辨率好，分辨时间快；二是灵敏度高；三是在同样剂 量辐照下，输出的信号比电离室大。但也有能量响应差而不能做绝对测量和辐射损伤效应等缺点。
+        \end{itemize}
+        \item 相对效率曲线体现出不同能量下探测效率的相对大小。通过与已知活度的放射源比较可以将相对效率归一到绝对效率。
+        在能量小于$2m_{e}$时，光子主要发生康普顿散射，能量会沉积在全能峰，所以探测效率随着能量增大逐渐增加。当能量大于$2m_{e}$时，开始发生电子对效应，高能量的电子和正电子可能在消耗完能量之前就从灵敏体积中逸出，在能谱中形成单逃逸峰或双逃逸峰，使全能峰的探测效率随能量增大而减小。
+        \item 高纯锗探测器禁带宽度较窄（$\sim 0.7\si{eV}$），需要低温真空(液氮冷却至$77\si{K}$左右)运
+        行，保证锗晶体工作于半导体状态。同时，因为探测器十分灵敏，低温也可以防止电子因为温度自激发带来显著噪声。 
+    \end{enumerate}
 \end{document}
