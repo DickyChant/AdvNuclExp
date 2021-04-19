@@ -9,6 +9,7 @@
 \usepackage{booktabs}
 \usepackage{appendix}
 \usepackage{hyperref}
+\usepackage{lscape}
 
 \renewcommand{\appendixpagename}{附录}
 
@@ -112,5 +113,52 @@ NaI(Tl)闪烁体并被反符合屏蔽探测器探测到的散射光子产生的�
     \includegraphics[width=0.7\textwidth]{../plots/Nc_td.pdf}
     \caption{$N_c-t_d$曲线\label{fig:Nc_td}}
 \end{figure}
+    
+根据曲线\ref{fig:Nc_td}，确定
+\begin{equation}
+    \begin{cases}
+    t_{d1} = 0.85\si{\micro s}\\
+    t_{d2}=2.0\si{\micro s}
+    \end{cases}
+\end{equation}得到\begin{equation}
+    t_{d0} = 1.4\si{\micro s}
+\end{equation}对应于上（外围放大器）延迟$2.1\si{\micro s}$，主放大器延迟$3.5\si{\micro s}$。
+\subsection{确定单道阈值}
+对于单道阈值的确定，采用的方案是测量延迟时间差为$1.4\si{\micro s}$和$2.5\si{\micro s}$下的计数$N_0,N_3$并计算效率。测量如表\ref{tab:Eff}
+\begin{table}[htbp]
+    \centering
+    \caption{单道阈值测量确定\label{tab:Eff}}
+    \input{Efficiency.tex}
+\end{table}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\textwidth]{../plots/Efficiency.pdf}
+    \caption{单道阈值测量确定表\label{fig:Eff}}
+\end{figure}
 
+通过测量数据，确定阈值为$0.1\si{V}$。
+\subsection{确定延迟放大器延迟时间和慢线性门门宽}
+通过实验步骤中所叙述的方法，确定参数如下：
+\begin{enumerate}
+    \item 延迟放大器延迟时间：$1.2\si{\micro s}$；
+    \item 慢线性门门宽：$5\si{\micro s}$。
+\end{enumerate}
+\subsection{$^{137}\text{Cs}$能谱测量}
+
+
+\section{致谢}
+    非常感谢赵捷老师的实验指导，也非常感谢和童星昱同学的讨论。
+    \clearpage
+    \appendix
+    \appendixpage
+    \section{思考题}
+    \begin{enumerate}
+        \item 提高伽马能谱的峰康比后,可以有效提高存在高能强峰时探测低能弱峰的能力。即如果低能弱峰落在高能强峰的康普顿坪上时,可以避免其被康普顿坪所
+        淹没,使能谱更加干净。
+        \item 通过设置阈值，卡掉全能峰。
+        \item 偶然符合的计数率为
+        \begin{equation}
+            (N_1+N_2)-N_1N_2\tau
+        \end{equation}
+    \end{enumerate}
 \end{document}
