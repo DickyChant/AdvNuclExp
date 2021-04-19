@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.4.10)  14 APR 2021 21:40
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.4.10)  19 APR 2021 13:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/sitianq/codes/AdvNuclExp/Exp2/Report/main
-(/home/sitianq/codes/AdvNuclExp/Exp2/Report/main.tex
+**/home/sitianq/codes/AdvNuclExp/Exp3/Report/main
+(/home/sitianq/codes/AdvNuclExp/Exp3/Report/main.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-02-18> (/usr/local/texlive/2021/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
@@ -495,7 +495,8 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 286.
 )
 \Hy@SectionHShift=\skip74
-) (./main.aux)
+)
+No file main.aux.
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
@@ -518,7 +519,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 18.
 LaTeX Font Info:    ... okay on input line 18.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 18.
 LaTeX Font Info:    ... okay on input line 18.
- ABD: EverySelectfont initializing macros
+ABD: EverySelectfont initializing macros
 LaTeX Info: Redefining \selectfont on input line 18.
 
 Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
@@ -629,94 +630,66 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 18.
 LaTeX Info: Redefining \pageref on input line 18.
 LaTeX Info: Redefining \nameref on input line 18.
- (./main.out) (./main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
 
+
+
+Package hyperref Warning: Rerun to get /PageLabels entry.
+
 LaTeX Font Info:    Trying to load font information for U+msa on input line 18.
- (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 18.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 21--26
 
- []
+/home/sitianq/codes/AdvNuclExp/Exp3/Report/main.tex:22: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22         \newline
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 30.
+/home/sitianq/codes/AdvNuclExp/Exp3/Report/main.tex:23: LaTeX Error: There's no line here to end.
 
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.23         \newline
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\gamma' on input line 30.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 30.
-
-Missing character: There is no γ (U+03B3) in font [lmroman10-regular]:mapping=tex-text;!
 [1
 
-]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 70.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 70.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 70.
-
-File: ../plots/Co_net.pdf Graphic file (type pdf)
-<use ../plots/Co_net.pdf>
-File: ../plots/Co_two_Peak.pdf Graphic file (type pdf)
-<use ../plots/Co_two_Peak.pdf>
-[2]
-File: ../plots/Eu_full_net.pdf Graphic file (type pdf)
-<use ../plots/Eu_full_net.pdf>
-File: ../plots/Roughly_Cali_full.pdf Graphic file (type pdf)
-<use ../plots/Roughly_Cali_full.pdf>
- [3] [4]
-File: ../plots/Full_Fit.pdf Graphic file (type pdf)
-<use ../plots/Full_Fit.pdf>
-File: ../plots/Relative.pdf Graphic file (type pdf)
-<use ../plots/Relative.pdf>
-File: ../plots/Absolute.pdf Graphic file (type pdf)
-<use ../plots/Absolute.pdf>
-File: ../plots/Eu_half_net.pdf Graphic file (type pdf)
-<use ../plots/Eu_half_net.pdf>
- [5] [6] [7]
-File: ../plots/Half_fit.pdf Graphic file (type pdf)
-<use ../plots/Half_fit.pdf>
-File: ../plots/slag_vs_env.pdf Graphic file (type pdf)
-<use ../plots/slag_vs_env.pdf>
- (./Env_E.tex)
-File: ../plots/Env_E.pdf Graphic file (type pdf)
-<use ../plots/Env_E.pdf>
- (./Slag_E.tex)
-File: ../plots/Slag_E.pdf Graphic file (type pdf)
-<use ../plots/Slag_E.pdf>
- [8] [9] [10] [11]
-Missing character: There is no γ (U+03B3) in font [lmroman10-regular]:mapping=tex-text;!
- [12
-
 ] (./main.aux)
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: E8A2A224BE38C5E18575EC07A2B76688;1256.
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 17336 strings out of 476919
- 384888 string characters out of 5821840
- 716457 words of memory out of 5000000
- 37007 multiletter control sequences out of 15000+600000
- 416326 words of font info for 128 fonts, out of 8000000 for 9000
+ 16998 strings out of 476919
+ 367479 string characters out of 5821840
+ 692032 words of memory out of 5000000
+ 36714 multiletter control sequences out of 15000+600000
+ 413107 words of font info for 100 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 101i,15n,104p,404b,817s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 101i,6n,104p,404b,729s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (12 pages).
+Output written on main.pdf (1 page).
