@@ -10,6 +10,7 @@
 \usepackage{appendix}
 \usepackage{hyperref}
 \usepackage{lscape}
+\usepackage{multirow}
 
 \renewcommand{\appendixpagename}{附录}
 
@@ -69,7 +70,7 @@
     其中$b_i$为$i$道域的本底计数率。$t$为样品测量时间。
     \subsection{实验目的}
     \begin{enumerate}
-        \item 了解逆矩阵法解析复杂γ谱的基本原理。
+        \item 了解逆矩阵法解析复杂$\gamma$谱的基本原理。
         \item 测量混合样品中各核素的未知活度。
     \end{enumerate}
     \section{实验器材与步骤}
@@ -89,7 +90,53 @@
         \item 合理选择特征道域(20~40 道)。列联立方程，自编程序用逆 矩阵法解方程，求出混合源中各组分现在的活度$x_j$，并计算误差
         $\sigma_{x_j}$。
     \end{enumerate}
+    \section{实验数据}
+    实验中测量得到的能谱图见附录。
+    \subsection{能谱峰测量及刻度}
+    实验中对已知源的刻度测量结果如表\ref{tab:Calibration}。
+    \begin{table}[htbp]
+        \centering
+        \caption{实验中利用已知源的刻度结果\label{tab:Calibration}}
+        \input{Calibration.tex}
+    \end{table}
 
+    刻度结果为\begin{equation}
+        E = 1.6245 * \text{Ch} + 6.3869
+    \end{equation}
+
+    回归结果如图\ref{fig:Calibration}。
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=0.7\textwidth]{../plots/Calibration.pdf}
+        \caption{实验中利用已知源的刻度结果\label{fig:Calibration}}
+    \end{figure}
+    \subsection{能量分辨率}
+    利用$^{137}\text{Cs}$源的全能峰，可以对实验装置的分辨率做出评价：
+    \begin{enumerate}
+        \item 峰位道址：403
+        \item FWHM：xxx
+        \item 能量分辨率：xxx
+    \end{enumerate}
+    \subsection{利用逆矩阵法解$\gamma$谱}
+    首先利用半衰期与活度的关系\begin{equation}
+        A = A_0\exp(-\frac{t}{T}\ln{2})
+    \end{equation}
+    
+    计算实验当日的已知源活度如表\ref{tab:Source}
+    \begin{table}[htbp]
+        \centering
+        \caption{实验当日的活度信息\label{tab:Source}}
+        \input{SourceInfo.csv}
+    \end{table}
+
+    对于实验采用的$^{60}\text{Cs}$，$^{137}\text{Cs}$源，在其峰位左右对称选取30道，其峰的道址范围分别如表\ref{tab:Region}。
+    \begin{table}[htbp]
+        \centering
+        \caption{道址的选取范围\label{tab:Region}}
+        \input{Region.tex}
+    \end{table}
+    
+    得到计数分别如表
 \section{致谢}
     感谢许金艳老师的指导，也感谢张轩豪同学和蒋沛成同学一起进行实验。 
     \clearpage
