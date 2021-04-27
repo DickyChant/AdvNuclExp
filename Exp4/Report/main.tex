@@ -135,8 +135,52 @@
         \caption{道址的选取范围\label{tab:Region}}
         \input{Region.tex}
     \end{table}
-    
-    得到计数分别如表
+
+    得到计数分别如表\ref{tab:Count}。
+    \begin{table}[htbp]
+        \centering
+        \caption{各区域各样品计数\label{tab:Count}}
+        \input{Count.tex}
+    \end{table}
+
+    可以计算出
+    \begin{equation}
+        A = \begin{pmatrix}
+            3.4922\times10^{-3}&1.4489\times10^{-5}\\
+       2.4979\times10^{-3}&3.2020\times10^{-2}
+        \end{pmatrix}
+    \end{equation}
+    故有
+    \begin{equation}
+        A^{-1} = \begin{pmatrix}
+            286.4437  & -0.1296\\
+  -22.3462  & 31.2403
+        \end{pmatrix}
+    \end{equation}
+    根据\begin{equation}
+        M = \begin{pmatrix}
+            284.0425\\1116.5211
+        \end{pmatrix}
+    \end{equation}
+    得到\begin{equation}
+        X = \begin{pmatrix}
+            81217\\28533
+        \end{pmatrix}
+    \end{equation}
+    根据误差传递公式，得到：
+    \begin{equation}
+        \sigma_{X} = \begin{pmatrix}
+            146\\
+   33
+        \end{pmatrix}
+    \end{equation}
+    得到最终结果
+    \begin{equation}
+        X+\sigma_{X} = \begin{pmatrix}
+            81217 \pm 146\\
+            28533\pm33
+        \end{pmatrix}
+    \end{equation}
 \section{致谢}
     感谢许金艳老师的指导，也感谢张轩豪同学和蒋沛成同学一起进行实验。 
     \clearpage
