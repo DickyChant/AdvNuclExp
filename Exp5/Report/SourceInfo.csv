@@ -1,0 +1,8 @@
+\begin{tabular}{lrrlrl}
+\toprule
+Element &  Half life time/d &  Ref. Activity/Bq & Ref. Date & Time to Exp./d & Activity/Bq \\
+\midrule
+     Co &           11012.0 &         238000.0 & 1995-10-16 & 9320 &  132,428.92 \\
+     Cs &            1925.2 &          85300.0 & 2015-09-24 & 2037 &   40,967.33 \\
+\bottomrule
+\end{tabular}
