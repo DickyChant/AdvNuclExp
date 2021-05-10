@@ -56,6 +56,70 @@
 \end{enumerate}
 \section{实验数据处理}
 \subsection{时间刻度曲线}
+测量不同延迟时间的$^{60}\text{Co}$符合谱如图\ref{fig:time}。
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width = 0.7\textwidth]{../plots/time.pdf}
+    \caption{不同延迟时间的$^{60}\text{Co}$符合谱\label{fig:time}}
+\end{figure}
+得到不同延迟时间和峰道址位置表如表\ref{tab:time}。
+\begin{table}[htbp]
+    \centering
+    \caption{不同延迟时间和峰道址关系表\label{tab:time}}
+    \input{TimeCalibration.tex}
+\end{table}
+
+将峰位和道址进行线性拟合，可以得到
+\begin{equation}
+    t = 0.0265\times\text{Ch}+9.2530
+\end{equation}
+
+拟合效果如图\ref{fig:TimeCalibration}。
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width = 0.7\textwidth]{../plots/TimeCalibration.pdf}
+    \caption{不同延迟时间和峰道址的关系及拟合\label{fig:TimeCalibration}}
+\end{figure}
+
+\subsection{比较有无能选关系下的峰分辨率}
+有能选情况下延迟时间为$16\si{ns}$的峰如图\ref{fig:EnergySelection}。
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\textwidth]{../plots/EnergySelection.pdf}
+    \caption{有能选条件下延迟时间为$16\si{ns}$的谱线测量结果\label{fig:EnergySelection}}
+\end{figure}
+
+对比有无能选条件下的延迟时间为$16\si{ns}$的两个峰的分辨率如表\ref{tab:EnergySelection}，可见施加能选条件，可以提高测量的分辨率。
+
+\begin{table}[htbp]
+    \centering
+    \caption{有无能选条件下$16\si{ns}$测量峰对比\label{tab:EnergySelection}}
+    \input{EnergySelection.tex}
+\end{table}
+\subsection{$N_c-t_d$曲线}
+通过变动$t_1$，固定$t_2 = 3\si{\micro s}$，得到的$N_c-t_d$曲线如图\ref{fig:Nc_td}。由图，取$t_1 = 2.8\si{\micro s}$。
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\textwidth]{../plots/Nc_Td.pdf}
+    \caption{$N_c-t_d$曲线\label{fig:Nc_td}}
+\end{figure}
+\subsection{正电子湮灭寿命计算}
+对5000s测量的谱图进行两次指数函数拟合，可以得到：
+\begin{equation}
+\begin{cases}
+\tau_{l} = 1/0.701046 = 1.426\si{ns}\\    
+\tau_{s} = 1/0.2.5822 = 0.3872\si{ns}
+\end{cases}
+\end{equation}
+拟合结果如图\ref{fig:5ks}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\textwidth]{../plots/5ks.pdf}
+    \caption{对正负电子湮灭寿命谱的拟合\label{fig:5ks}}
+\end{figure}
 \section{致谢}
     感谢赵捷老师的指导，也感谢张轩豪同学和蒋沛成同学一起进行实验。 
     \clearpage
@@ -80,6 +144,6 @@
         得到两个光子动量大小相等方向相反，为$0.511\si{MeV}/c$，能量相等，为$0.511\si{MeV}$。
         \item 谱比较简单，只有两个寿命；有伽马射线作为正电子产生和湮灭的时标信号，便于测量正电子寿命。
         \item 是一个很细的峰。会使谱线展宽，降低测量的准确性。
-        \item 实验使用的Na22源较弱，测量时间为5000s，如果能使用活度较大的源，就可以减小误差。
+        \item 实验使用的$^{22}\text{Na}$源较弱，测量时间为5000s，如果能使用活度较大的源，就可以减小误差。
     \end{enumerate}
 \end{document}
